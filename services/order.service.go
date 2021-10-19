@@ -18,6 +18,9 @@ func Kulak(db *gorm.DB, orderUser models.OrderKulak, idUser int) error {
 	if err := tx.Where("id_user = ? AND id = ?", orderUser.IdUserOrder, orderUser.IdProduct).Find(&product).Error; err != nil {
 		return err
 	}
+	if product.Stock < orderUser.Stock {
+		return tx.Error
+	}
 	order := &models.Order{
 		TanggalBeli: orderUser.TanggalBeli,
 		BanyakOrder: orderUser.BanyakOrder,
@@ -47,6 +50,8 @@ func Kulak(db *gorm.DB, orderUser models.OrderKulak, idUser int) error {
 		tx.Rollback()
 		return err
 	}
+	product.Stock = product.Stock - orderUser.Stock
+	tx.Save(&product)
 	tx.Commit()
 	return nil
 }

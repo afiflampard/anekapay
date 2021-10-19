@@ -36,4 +36,5 @@ type OrderKulak struct {
 	HargaJual   uint      `json:"harga_jual"`
 	IdProduct   uint      `json:"id_product"`
 	IdUserOrder uint      `json:"id_user_order"`
+	Stock       uint      `json:"stock"`
 }
