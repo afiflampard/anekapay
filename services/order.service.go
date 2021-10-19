@@ -37,6 +37,7 @@ func Kulak(db *gorm.DB, orderUser models.OrderKulak, idUser int) error {
 		NamaProduk: product.NamaProduk,
 		HargaBeli:  product.HargaBeli,
 		HargaJual:  product.HargaJual + orderUser.HargaJual,
+		Stock:      orderUser.Stock,
 	}
 	if err := tx.Create(prductBeli).Error; err != nil {
 		tx.Rollback()
