@@ -22,7 +22,7 @@ func main() {
 	controllers.InitiateDB(db)
 
 	router := mux.NewRouter()
-
+	router.HandleFunc("/", HelloWorld).Methods("GET")
 	subRouterAuth := router.PathPrefix("/auth").Subrouter()
 	subRouterUser := router.PathPrefix("/user").Subrouter()
 	subRouterProduct := router.PathPrefix("/product").Subrouter()
