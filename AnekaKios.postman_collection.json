@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "c6b35927-0d42-43de-a93f-df0fc1a25450",
+		"name": "AnekaKios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"afiflampard32@gmail.com\",\r\n    \"password\" : \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/auth/v1/login",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "UserSignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"afiflampard54@gmail.com\",\r\n    \"password\" : \"1234\",\r\n    \"name\" :\"Fifa\",\r\n    \"mobile\" : \"0987654\",\r\n    \"alamat\" : \"Jetis\",\r\n    \"roleId\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/auth/v1/signup",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZmlmbGFtcGFyZDEzMkBnbWFpbC5jb20iLCJleHAiOjE2MzQ2NDk1NDh9.nl88PJrvSCAgBOfiy2H7H47waEbGr461K7lpnDXVlzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/user/v1/1",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"v1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZmlmbGFtcGFyZDMyQGdtYWlsLmNvbSIsImV4cCI6MTYzNDU0MjA2MH0.jEaYS2RD1m9iAzUUEcFUwJNRl6ZWYj4-8iXemUki_0M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/user/v1/",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZmlmbGFtcGFyZDMyQGdtYWlsLmNvbSIsImV4cCI6MTYzNDU0MjA2MH0.jEaYS2RD1m9iAzUUEcFUwJNRl6ZWYj4-8iXemUki_0M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/user/v1/4",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"v1",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZmlmbGFtcGFyZDEzMkBnbWFpbC5jb20iLCJleHAiOjE2MzQ2NTA1MjR9.HFN05mfkVRj-E5NHtOQp7nlxlmb5tZbAD_w1Tr_lvcM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_produk\" : \"shampoo\",\r\n    \"harga_beli\" : 5000,\r\n    \"harga_jual\" : 6000,\r\n    \"stock\" : 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/product/v1/create",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"product",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZmlmbGFtcGFyZDMyQGdtYWlsLmNvbSIsImV4cCI6MTYzNDY1MDcwOX0.TWx_j2Lm-rXxx6dK2LxS6eCH-0pdJHt2uH8rBOA61tU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/product/v1/6",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"product",
+						"v1",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZmlmbGFtcGFyZDEzMkBnbWFpbC5jb20iLCJleHAiOjE2MzQ1NjYzMzh9.-UHG_LaPavIii8J3g6BIj0ZwV4EhjdWkewp3KNrx44A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/product/v1/",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"product",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhZmlmbGFtcGFyZDEzMkBnbWFpbC5jb20iLCJleHAiOjE2MzQ1NjYzMzh9.-UHG_LaPavIii8J3g6BIj0ZwV4EhjdWkewp3KNrx44A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/product/v1/3",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"product",
+						"v1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateKulak",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZmlmbGFtcGFyZDMyQGdtYWlsLmNvbSIsImV4cCI6MTYzNDY1MDcwOX0.TWx_j2Lm-rXxx6dK2LxS6eCH-0pdJHt2uH8rBOA61tU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"banyak_order\" : 3,\r\n    \"harga_jual\" : 2000,\r\n    \"id_product\" : 5,\r\n    \"id_user_order\" : 2,\r\n    \"stock\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://anekapay.herokuapp.com/kulak/v1/kulak",
+					"protocol": "https",
+					"host": [
+						"anekapay",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"kulak",
+						"v1",
+						"kulak"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
